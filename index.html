@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable game</title>
+    <link rel="stylesheet" href="/css/draggable.css" />
+  </head>
+  <body>
+    <!-- Pregunta 1 -->
+    <div
+      class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fuente1"
+      style="margin: 5px 0px"
+    >
+      <input
+        type="text"
+        size="2"
+        style="text-align: center"
+        class="nota-abierta"
+        min="0"
+        max="10"
+        id="pre1a"
+        readonly=""
+      />
+      <font><b class="numRosa"> 1. </b></font>
+      <b>Ordena</b> correctamente las partes y <b>arma</b> el robot manipulador
+      <i class="5pts"></i>
+      <div
+        class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+        style="margin: 5px 0px"
+      >
+        <div
+          style="
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+          "
+        >
+          <img src="assets/img1.png" alt="" width="25%" />
+          <div id="p1act"></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn" onclick="calificar()">Verificar</button>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/draggable.js"></script>
+    <script>
+      const id = "p1act";
+      const items = [
+        "/assets/img2.png",
+        "/assets/img3.png",
+        "/assets/img4.png",
+        "/assets/img5.png",
+      ];
+
+      buildDragDrop(id, items);
+
+      function calificar() {
+        const respuestas = [
+          "/assets/img2.png",
+          "/assets/img3.png",
+          "/assets/img4.png",
+          "/assets/img5.png",
+        ];
+        const calificacion = coreDraggable(id, respuestas);
+        document.getElementById("pre1a").value = calificacion;
+      }
+    </script>
+  </body>
+</html>

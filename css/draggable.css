@@ -1,0 +1,133 @@
+.draggable-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable-items-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable-item {
+  width: 100px;
+  aspect-ratio: 1/1;
+  margin: 10px;
+  cursor: move;
+}
+
+.img-responsive {
+  height: 100%;
+}
+
+.draggable-res-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.drag-input-container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: solid 3px #42baed;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.order-indicator {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: solid 3px #42baed;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  top: -20px;
+  left: -20px;
+}
+
+.order-indicator p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #42baed;
+}
+
+.hovered {
+  border: solid 3px #42baed;
+}
+
+.drag-input-container > .draggable-item {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  aspect-ratio: 1/1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.drag-input-container > .draggable-item > .img-responsive {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  aspect-ratio: 1/1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.restart-btn {
+  width: 100px;
+  height: 50px;
+  background-color: #42baed;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.bien {
+  background: #b1ffb3 !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.mal {
+  background: #ffa8a8 !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  background-color: #42baed;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+}
